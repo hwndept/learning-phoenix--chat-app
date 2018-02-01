@@ -2,7 +2,6 @@
 
 ## How to start working with a project
 
-
 1. Install [Elixir](https://elixir-lang.org)
 2. Install [NodeJS](https://nodejs.org)
 3. Install [PostgreSQL](https://wiki.postgresql.org/wiki/Detailed_installation_guides)
