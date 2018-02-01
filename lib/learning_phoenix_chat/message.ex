@@ -5,6 +5,7 @@ defmodule LearningPhoenixChat.Message do
 
 
   schema "messages" do
+    field :author, :string
     field :text, :string
 
     timestamps()
@@ -13,7 +14,7 @@ defmodule LearningPhoenixChat.Message do
   @doc false
   def changeset(%Message{} = message, attrs) do
     message
-    |> cast(attrs, [:text])
-    |> validate_required([:text])
+    |> cast(attrs, [:author, :text])
+    |> validate_required([:author, :text])
   end
 end

@@ -1,10 +1,11 @@
 const historyEl = document.querySelector('#chat-history');
 const messageTextEl = document.querySelector('#chat-message-text');
 const messageHistoryEl = document.querySelector('#chat-history');
+const usernameEl = document.querySelector('#chat-username');
 
 function addMessage(message) {
   let newMessageEl = document.createElement("div");
-  newMessageEl.innerText = `[${message.time}] ${message.text}`;
+  newMessageEl.innerText = `[${message.time}] - ${message.author || '<unknown>'}: ${message.text}`;
   messageHistoryEl.appendChild(newMessageEl);
 }
 
@@ -22,7 +23,7 @@ exports.connect = (socket) => {
   messageTextEl.addEventListener("keypress", event => {
     if (event.keyCode !== 13) return;
 
-    channel.push("message", {text: messageTextEl.value});
+    channel.push("message", {author: usernameEl.value, text: messageTextEl.value});
     messageTextEl.value = "";
   });
 
