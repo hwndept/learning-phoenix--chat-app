@@ -12,8 +12,12 @@ exports.connect = (socket) => {
   const channel = socket.channel("room:general", {});
 
   channel.join()
-    .receive("ok", resp => { console.log("Joined successfully", resp) })
-    .receive("error", resp => { console.log("Unable to join", resp) });
+    .receive("ok", resp => {
+      console.log("> join: success", resp)
+      
+      channel.push("history", {});
+    })
+    .receive("error", resp => console.log("> join: error", resp));
   
   messageTextEl.addEventListener("keypress", event => {
     if (event.keyCode !== 13) return;
@@ -26,5 +30,11 @@ exports.connect = (socket) => {
     console.log('> message', payload);
 
     addMessage(payload);
+  });
+
+  channel.on("history", payload => {
+    console.log('> history', payload);
+
+    payload.messages.forEach(addMessage);
   });
 }
