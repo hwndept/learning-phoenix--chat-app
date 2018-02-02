@@ -1,4 +1,4 @@
-defmodule LearningPhoenixChatWeb.ErrorHelpers do
+defmodule ChatAppWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule LearningPhoenixChatWeb.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(LearningPhoenixChatWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(ChatAppWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(LearningPhoenixChatWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(ChatAppWeb.Gettext, "errors", msg, opts)
     end
   end
 end

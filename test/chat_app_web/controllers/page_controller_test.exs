@@ -1,5 +1,5 @@
-defmodule LearningPhoenixChatWeb.PageControllerTest do
-  use LearningPhoenixChatWeb.ConnCase
+defmodule ChatAppWeb.PageControllerTest do
+  use ChatAppWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

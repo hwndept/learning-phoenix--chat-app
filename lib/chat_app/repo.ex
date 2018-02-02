@@ -1,5 +1,5 @@
-defmodule LearningPhoenixChat.Repo do
-  use Ecto.Repo, otp_app: :learning_phoenix_chat
+defmodule ChatApp.Repo do
+  use Ecto.Repo, otp_app: :chat_app
 
   @doc """
   Dynamically loads the repository url from the

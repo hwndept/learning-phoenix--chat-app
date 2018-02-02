@@ -1,12 +1,12 @@
-defmodule LearningPhoenixChatWeb do
+defmodule ChatAppWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use LearningPhoenixChatWeb, :controller
-      use LearningPhoenixChatWeb, :view
+      use ChatAppWeb, :controller
+      use ChatAppWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,17 +19,17 @@ defmodule LearningPhoenixChatWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: LearningPhoenixChatWeb
+      use Phoenix.Controller, namespace: ChatAppWeb
       import Plug.Conn
-      import LearningPhoenixChatWeb.Router.Helpers
-      import LearningPhoenixChatWeb.Gettext
+      import ChatAppWeb.Router.Helpers
+      import ChatAppWeb.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/learning_phoenix_chat_web/templates",
-                        namespace: LearningPhoenixChatWeb
+      use Phoenix.View, root: "lib/chat_app_web/templates",
+                        namespace: ChatAppWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
@@ -37,9 +37,9 @@ defmodule LearningPhoenixChatWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import LearningPhoenixChatWeb.Router.Helpers
-      import LearningPhoenixChatWeb.ErrorHelpers
-      import LearningPhoenixChatWeb.Gettext
+      import ChatAppWeb.Router.Helpers
+      import ChatAppWeb.ErrorHelpers
+      import ChatAppWeb.Gettext
     end
   end
 
@@ -54,7 +54,7 @@ defmodule LearningPhoenixChatWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import LearningPhoenixChatWeb.Gettext
+      import ChatAppWeb.Gettext
     end
   end
 

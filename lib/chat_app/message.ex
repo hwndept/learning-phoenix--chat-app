@@ -1,7 +1,7 @@
-defmodule LearningPhoenixChat.Message do
+defmodule ChatApp.Message do
   use Ecto.Schema
   import Ecto.Changeset
-  alias LearningPhoenixChat.Message
+  alias ChatApp.Message
 
 
   schema "messages" do

@@ -1,4 +1,4 @@
-defmodule :"Elixir.LearningPhoenixChat.Repo.Migrations.Add-author-column" do
+defmodule :"Elixir.ChatApp.Repo.Migrations.Add-author-column" do
   use Ecto.Migration
 
   def change do

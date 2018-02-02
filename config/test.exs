@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :learning_phoenix_chat, LearningPhoenixChatWeb.Endpoint,
+config :chat_app, ChatAppWeb.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,7 +10,7 @@ config :learning_phoenix_chat, LearningPhoenixChatWeb.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :learning_phoenix_chat, LearningPhoenixChat.Repo,
+config :chat_app, ChatApp.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",

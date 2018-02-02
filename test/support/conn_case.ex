@@ -1,4 +1,4 @@
-defmodule LearningPhoenixChatWeb.ConnCase do
+defmodule ChatAppWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,18 +19,18 @@ defmodule LearningPhoenixChatWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      import LearningPhoenixChatWeb.Router.Helpers
+      import ChatAppWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint LearningPhoenixChatWeb.Endpoint
+      @endpoint ChatAppWeb.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(LearningPhoenixChat.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ChatApp.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(LearningPhoenixChat.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(ChatApp.Repo, {:shared, self()})
     end
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end

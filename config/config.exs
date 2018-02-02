@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :learning_phoenix_chat,
-  ecto_repos: [LearningPhoenixChat.Repo]
+config :chat_app,
+  ecto_repos: [ChatApp.Repo]
 
 # Configures the endpoint
-config :learning_phoenix_chat, LearningPhoenixChatWeb.Endpoint,
+config :chat_app, ChatAppWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "tdorobWq19AHIBVj5KRr9PhIu+twVsrAxsX/9fMoLWLNeHUrN72yylexvTu57pcU",
-  render_errors: [view: LearningPhoenixChatWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: LearningPhoenixChat.PubSub,
+  render_errors: [view: ChatAppWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: ChatApp.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

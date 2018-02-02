@@ -1,6 +1,6 @@
-defmodule LearningPhoenixChat do
+defmodule ChatApp do
   @moduledoc """
-  LearningPhoenixChat keeps the contexts that define your domain
+  ChatApp keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

@@ -1,4 +1,4 @@
-defmodule LearningPhoenixChat.Repo.Migrations.CreateMessages do
+defmodule ChatApp.Repo.Migrations.CreateMessages do
   use Ecto.Migration
 
   def change do

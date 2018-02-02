@@ -1,5 +1,5 @@
-defmodule LearningPhoenixChatWeb.Router do
-  use LearningPhoenixChatWeb, :router
+defmodule ChatAppWeb.Router do
+  use ChatAppWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +13,14 @@ defmodule LearningPhoenixChatWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", LearningPhoenixChatWeb do
+  scope "/", ChatAppWeb do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", LearningPhoenixChatWeb do
+  # scope "/api", ChatAppWeb do
   #   pipe_through :api
   # end
 end

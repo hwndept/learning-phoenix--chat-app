@@ -1,7 +1,7 @@
-defmodule LearningPhoenixChatWeb.Room do
+defmodule ChatAppWeb.Room do
   use Phoenix.Channel
 
-  alias LearningPhoenixChat.{Repo, Message}
+  alias ChatApp.{Repo, Message}
 
   def join("room:general", _message, socket) do
     {:ok, socket}

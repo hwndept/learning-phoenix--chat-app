@@ -1,5 +1,5 @@
-defmodule LearningPhoenixChatWeb.ErrorView do
-  use LearningPhoenixChatWeb, :view
+defmodule ChatAppWeb.ErrorView do
+  use ChatAppWeb, :view
 
   def render("404.html", _assigns) do
     "Page not found"

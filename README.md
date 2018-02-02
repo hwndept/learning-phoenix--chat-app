@@ -1,4 +1,4 @@
-# LearningPhoenixChat
+# ChatApp
 
 ## How to start working with a project
 

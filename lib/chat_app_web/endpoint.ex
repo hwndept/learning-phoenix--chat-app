@@ -1,14 +1,14 @@
-defmodule LearningPhoenixChatWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :learning_phoenix_chat
+defmodule ChatAppWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :chat_app
 
-  socket "/socket", LearningPhoenixChatWeb.UserSocket
+  socket "/socket", ChatAppWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :learning_phoenix_chat, gzip: false,
+    at: "/", from: :chat_app, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -38,7 +38,7 @@ defmodule LearningPhoenixChatWeb.Endpoint do
     key: "_learning_phoenix_chat_key",
     signing_salt: "WbYc/Lp2"
 
-  plug LearningPhoenixChatWeb.Router
+  plug ChatAppWeb.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.
